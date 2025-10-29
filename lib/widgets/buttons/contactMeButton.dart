@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:neubrutalism_ui/neubrutalism_ui.dart';
+import 'package:flutter_resume/colors.dart';
 
 import 'package:url_launcher/url_launcher.dart'; 
 
@@ -30,10 +30,10 @@ class ContactMeButton extends StatelessWidget {
         width: 320,
         decoration: BoxDecoration(
           color: white,
-          border: BoxBorder.all(color: neuBlack, width: 3.0),
+          border: BoxBorder.all(color: black, width: 3.0),
           boxShadow: [
             BoxShadow(
-              color: neuBlack, 
+              color: black, 
               offset: Offset(5, 5), 
             )
           ]
@@ -48,7 +48,7 @@ class ContactMeButton extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: Container(
                   decoration: BoxDecoration(
-                    color: neuBlack,
+                    color: black,
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(16.0),

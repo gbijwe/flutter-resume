@@ -3,6 +3,7 @@ import 'dart:math' as Math;
 import 'package:flutter/material.dart';
 import 'package:flutter_resume/widgets/cards/projectCard.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_resume/colors.dart';
 import 'package:neubrutalism_ui/neubrutalism_ui.dart';
 
 class MyProjects extends StatelessWidget {
@@ -17,12 +18,12 @@ class MyProjects extends StatelessWidget {
         color: orange,
         border: Border.symmetric(
           vertical: BorderSide(
-            color: neuBlack,
+            color: black,
             width: neuBorder,
             strokeAlign: BorderSide.strokeAlignOutside,
           ),
           horizontal: BorderSide(
-            color: neuBlack,
+            color: black,
             width: neuBorder,
             strokeAlign: BorderSide.strokeAlignOutside,
           ),
@@ -45,7 +46,7 @@ class MyProjects extends StatelessWidget {
                       margin: EdgeInsets.symmetric(horizontal: 16.0),
                       decoration: BoxDecoration(
                         color: white,
-                        border: BoxBorder.all(color: neuBlack, width: 2.0),
+                        border: BoxBorder.all(color: black, width: 2.0),
                       ),
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
@@ -54,7 +55,7 @@ class MyProjects extends StatelessWidget {
                           textAlign: TextAlign.left,
                           style: GoogleFonts.archivoBlack(
                             fontSize: 48.0,
-                            color: neuBlack,
+                            color: black,
                             fontWeight: FontWeight.w900,
                           ),
                         ),
@@ -69,7 +70,7 @@ class MyProjects extends StatelessWidget {
                           width: 45,
                           decoration: BoxDecoration(
                             color: pink,
-                            border: BoxBorder.all(color: neuBlack, width: 2.0),
+                            border: BoxBorder.all(color: black, width: 2.0),
                           ),
                         ),
                       ),

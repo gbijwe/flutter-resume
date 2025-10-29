@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_resume/widgets/buttons/button.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:neubrutalism_ui/neubrutalism_ui.dart';
+import 'package:flutter_resume/colors.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 Future<void> launch(String url, {bool isNewTab = true}) async {
@@ -30,7 +30,7 @@ class TestHero extends StatelessWidget {
               decoration: BoxDecoration(
                 color: green,
                 border: BoxBorder.all(
-                  color: neuBlack, 
+                  color: black, 
                   width: 2.0,
                 )
               ),
@@ -44,7 +44,7 @@ class TestHero extends StatelessWidget {
                 textAlign: TextAlign.left,
                 style: GoogleFonts.archivoBlack(
                   fontSize: 84.0,
-                  color: neuBlack,
+                  color: black,
                   fontWeight: FontWeight.w900,
                 ),
               ),
@@ -53,7 +53,7 @@ class TestHero extends StatelessWidget {
                 textAlign: TextAlign.left,
                 style: GoogleFonts.archivoBlack(
                   fontSize: 84.0,
-                  color: neuBlack,
+                  color: black,
                   backgroundColor: yellow,
                   fontWeight: FontWeight.w900,
                 ),
@@ -66,7 +66,7 @@ class TestHero extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                 border: BoxBorder.fromLTRB(
-                  left: BorderSide(width: 5.0, color: neuBlack)
+                  left: BorderSide(width: 5.0, color: black)
                 )
               ),
               child: Padding(
@@ -74,7 +74,7 @@ class TestHero extends StatelessWidget {
                 child: Text('Computer Science student \nspecializing in mobile app development, \nembedded systems, and IoT solutions.', style: GoogleFonts.archivoBlack(
                   fontSize: 28.0, 
                   fontWeight: FontWeight.w400,
-                  color: neuBlack,
+                  color: black,
                 ),),
               ),
             ),
@@ -84,9 +84,9 @@ class TestHero extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
            children: [
-              MyButton(title: "Download Resume", onPressed: () => launch("https://gb.is-a.dev/static/media/gaurav_bijwe_aug_2025.ac9404793c3b4cc97a75.pdf"), color: yellow, textColor: neuBlack, shadowColor: neuBlack, fontsize: 18,),
+              MyButton(title: "Download Resume", onPressed: () => launch("https://gb.is-a.dev/static/media/gaurav_bijwe_aug_2025.ac9404793c3b4cc97a75.pdf"), color: yellow, textColor: black, shadowColor: black, fontsize: 18,),
               const SizedBox(width: 16.0),
-              MyButton(title: "Contact Me", onPressed: () {}, color: white, textColor: neuBlack, shadowColor: neuBlack, fontsize: 18,),
+              MyButton(title: "Contact Me", onPressed: () {}, color: white, textColor: black, shadowColor: black, fontsize: 18,),
            ] 
           ),
           const SizedBox(height: 100.0,),
@@ -108,7 +108,7 @@ class TestHero extends StatelessWidget {
           //             textAlign: TextAlign.left,
           //             style: GoogleFonts.archivoBlack(
           //               fontSize: 64.0,
-          //               color: neuBlack,
+          //               color: black,
           //               fontWeight: FontWeight.w900,
           //             ),
           //           ),
@@ -117,7 +117,7 @@ class TestHero extends StatelessWidget {
           //             textAlign: TextAlign.left,
           //             style: GoogleFonts.archivoBlack(
           //               fontSize: 56.0,
-          //               color: neuBlack,
+          //               color: black,
           //               backgroundColor: yellow,
           //               fontWeight: FontWeight.w900,
           //             ),

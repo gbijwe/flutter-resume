@@ -2,6 +2,7 @@ import 'dart:math' as Math;
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_resume/colors.dart';
 import 'package:neubrutalism_ui/neubrutalism_ui.dart';
 
 class Footer extends StatelessWidget {
@@ -17,8 +18,8 @@ class Footer extends StatelessWidget {
       angle: -degrees * Math.pi / 180,
       child: Container(
         decoration: BoxDecoration(
-          color: neuBlack,
-          border: BoxBorder.all(color: neuBlack, width: neuBorder),
+          color: black,
+          border: BoxBorder.all(color: black, width: neuBorder),
         ),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 4.0),

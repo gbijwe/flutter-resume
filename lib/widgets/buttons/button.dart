@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:neubrutalism_ui/neubrutalism_ui.dart';
+import 'package:flutter_resume/colors.dart';
 
 class MyButton extends StatelessWidget {
   const MyButton({required this.title, this.color, this.shadowColor, this.textColor, this.onPressed, this.fontsize, super.key});
@@ -21,12 +21,12 @@ class MyButton extends StatelessWidget {
         decoration: BoxDecoration(
           color: color ?? white,
           border: BoxBorder.all(
-            color: neuBlack, 
+            color: black, 
             width: 2.0,
           ),
           boxShadow: [
             BoxShadow(
-              color: shadowColor ?? neuBlack, 
+              color: shadowColor ?? black, 
               offset: Offset(3, 3)
             )
           ],
@@ -37,7 +37,7 @@ class MyButton extends StatelessWidget {
             title, 
             style: GoogleFonts.archivoBlack(
               fontSize: fontsize ?? 14.0, 
-              color: textColor ?? neuBlack,
+              color: textColor ?? black,
               fontWeight: FontWeight.normal
             )
           ),

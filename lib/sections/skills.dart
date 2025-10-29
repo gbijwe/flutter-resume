@@ -3,6 +3,7 @@ import 'dart:math' as Math;
 import 'package:flutter/material.dart';
 import 'package:flutter_resume/widgets/cards/skillCard.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_resume/colors.dart';
 import 'package:neubrutalism_ui/neubrutalism_ui.dart';
 
 class MySkills extends StatelessWidget {
@@ -16,12 +17,12 @@ class MySkills extends StatelessWidget {
         color: white,
         border: Border.symmetric(
           vertical: BorderSide(
-            color: neuBlack,
+            color: black,
             width: neuBorder,
             strokeAlign: BorderSide.strokeAlignOutside
           ),
           horizontal: BorderSide(
-            color: neuBlack,
+            color: black,
             width: neuBorder,
             strokeAlign: BorderSide.strokeAlignOutside
           )
@@ -57,7 +58,7 @@ class MySkills extends StatelessWidget {
                   textAlign: TextAlign.left,
                   style: GoogleFonts.archivoBlack(
                     fontSize: 56.0,
-                    color: neuBlack,
+                    color: black,
                     fontWeight: FontWeight.w900
                   ),
                 ),

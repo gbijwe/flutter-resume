@@ -2,6 +2,7 @@ import 'dart:math' as Math;
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_resume/colors.dart';
 import 'package:neubrutalism_ui/neubrutalism_ui.dart';
 
 class NeuAppBar extends StatelessWidget {
@@ -35,7 +36,7 @@ class NeuAppBar extends StatelessWidget {
           borderRadius: BorderRadius.circular(borderRadius ?? 0.0),
           border: Border.fromBorderSide(
             BorderSide(
-              color: neuBlack,
+              color: black,
               width: neuBorder,
               strokeAlign: BorderSide.strokeAlignOutside
             )
@@ -53,7 +54,7 @@ class NeuAppBar extends StatelessWidget {
                   decoration: BoxDecoration(
                     color: yellow,
                     border: BoxBorder.all(
-                      color: neuBlack,
+                      color: black,
                       width: neuBorder,
                     )
                   ),
@@ -63,7 +64,7 @@ class NeuAppBar extends StatelessWidget {
                       title,
                       style: GoogleFonts.sora(
                         textStyle: TextStyle(
-                        color: neuBlack,
+                        color: black,
                         fontSize: fontSize ?? 8.0,
                         fontWeight: FontWeight.w700,
                         letterSpacing: 0.0,

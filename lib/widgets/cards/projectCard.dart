@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_resume/widgets/buttons/button.dart';
 import 'package:flutter_resume/widgets/tags/skillTag.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_resume/colors.dart';
 import 'package:neubrutalism_ui/neubrutalism_ui.dart';
 import 'package:url_launcher/url_launcher.dart';
 

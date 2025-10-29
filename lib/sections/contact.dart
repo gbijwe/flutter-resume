@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_resume/sections/footer.dart';
 import 'package:flutter_resume/widgets/buttons/contactMeButton.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_resume/colors.dart';
 import 'package:neubrutalism_ui/neubrutalism_ui.dart';
 
 class ContactMe extends StatelessWidget {
@@ -22,7 +23,7 @@ class ContactMe extends StatelessWidget {
             strokeAlign: BorderSide.strokeAlignOutside,
           ),
           horizontal: BorderSide(
-            color: neuBlack,
+            color: black,
             width: neuBorder,
             strokeAlign: BorderSide.strokeAlignOutside,
           ),

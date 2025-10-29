@@ -2,6 +2,7 @@ import 'dart:math' as Math;
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_resume/colors.dart';
 import 'package:neubrutalism_ui/neubrutalism_ui.dart';
 
 class AboutMe extends StatelessWidget {
@@ -71,8 +72,8 @@ class AboutMe extends StatelessWidget {
                 child: NeuContainer(
                   color: white,
                   width: 0.75 * MediaQuery.of(context).size.width,
-                  borderColor: neuBlack,
-                  shadowColor: neuBlack,
+                  borderColor: black,
+                  shadowColor: black,
                   offset: Offset(8,8),
                   child: Padding(
                     padding: const EdgeInsets.symmetric(vertical: 32.0, horizontal: 32.0),

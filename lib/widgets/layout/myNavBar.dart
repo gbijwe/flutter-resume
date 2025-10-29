@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_resume/widgets/layout/navbar.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:neubrutalism_ui/neubrutalism_ui.dart';
+import 'package:flutter_resume/colors.dart';
 
 class MyNavBar extends StatelessWidget {
   const MyNavBar({super.key});
@@ -12,14 +12,14 @@ class MyNavBar extends StatelessWidget {
       decoration: BoxDecoration(
         border: BoxBorder.fromLTRB(
           bottom: BorderSide(
-            color: neuBlack,
+            color: black,
             width: 3,
             // strokeAlign: BorderSide.strokeAlignOutside,
           ),
         ),
         boxShadow: [
           BoxShadow(
-            color: neuBlack.withAlpha(50),
+            color: black.withAlpha(50),
           ),
         ]
       ),
@@ -36,7 +36,7 @@ class MyNavBar extends StatelessWidget {
               child: Text('About', 
                 style: GoogleFonts.sora(
                   fontSize: 16.0,
-                  color: neuBlack,
+                  color: black,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -49,7 +49,7 @@ class MyNavBar extends StatelessWidget {
                child: Text('Projects', 
                 style: GoogleFonts.sora(
                   fontSize: 16.0,
-                  color: neuBlack,
+                  color: black,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -62,7 +62,7 @@ class MyNavBar extends StatelessWidget {
               child: Text('Skills', 
                 style: GoogleFonts.sora(
                   fontSize: 16.0,
-                  color: neuBlack,
+                  color: black,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -75,7 +75,7 @@ class MyNavBar extends StatelessWidget {
               child: Text('Contact', 
                 style: GoogleFonts.sora(
                   fontSize: 16.0,
-                  color: neuBlack,
+                  color: black,
                   fontWeight: FontWeight.bold,
                 ),
               ),
