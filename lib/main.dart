@@ -24,7 +24,14 @@ class MainApp extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              MyNavBar(),
+              LayoutBuilder(builder: (context, constraints) {
+                if (constraints.maxWidth >= 650) {
+                  return MyNavBar();
+                } else {
+                  // return mobileNavbar;
+                  return SizedBox.shrink();
+                }
+              }),
               TestHero(),
               AboutMe(),
               MySkills(),

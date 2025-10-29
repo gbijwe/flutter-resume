@@ -61,19 +61,22 @@ class TestHero extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 24.0,),
-          Container(
-            decoration: BoxDecoration(
-              border: BoxBorder.fromLTRB(
-                left: BorderSide(width: 5.0, color: neuBlack)
-              )
-            ),
-            child: Padding(
-              padding: const EdgeInsets.only(left: 8.0),
-              child: Text('Computer Science student \nspecializing in mobile app development, \nembedded systems, and IoT solutions.', style: GoogleFonts.archivoBlack(
-                fontSize: 28.0, 
-                fontWeight: FontWeight.w400,
-                color: neuBlack,
-              ),),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+            child: Container(
+              decoration: BoxDecoration(
+                border: BoxBorder.fromLTRB(
+                  left: BorderSide(width: 5.0, color: neuBlack)
+                )
+              ),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 8.0),
+                child: Text('Computer Science student \nspecializing in mobile app development, \nembedded systems, and IoT solutions.', style: GoogleFonts.archivoBlack(
+                  fontSize: 28.0, 
+                  fontWeight: FontWeight.w400,
+                  color: neuBlack,
+                ),),
+              ),
             ),
           ),
           const SizedBox(height: 50.0,),
