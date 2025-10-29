@@ -12,10 +12,6 @@ jobs:
             pages: write
             id-token: write
 
-        environment: 
-            name: github-pages
-            url: ${{ steps.deployment.outputs.page_url }}
-
         steps:
             - name: Checkout repo
               uses: actions/checkout@v4
@@ -41,3 +37,19 @@ jobs:
             - name: Deployment Success Notification
               if: success()
               run: echo "Deployed successfully to GitHub Pages"
+    
+    deploy: 
+        name: Deploy to GitHub Pages
+        environment: 
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
+        needs: build
+        runs-on: ubuntu-latest
+        if: github.ref == 'refs/heads/main'
+
+        steps:
+            - name: Deploy to gh-pages
+              uses: peaceiris/actions-gh-pages@v3
+              with:
+                github_token: ${{ secrets.GITHUB_TOKEN }}
+                publish_dir: ./build
