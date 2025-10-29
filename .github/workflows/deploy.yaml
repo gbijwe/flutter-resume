@@ -7,6 +7,8 @@ jobs:
     build:
         name: Build and Deploy
         runs-on: ubuntu-latest
+        permissions:
+            contents: write
         steps:
             - name: Checkout repo
               uses: actions/checkout@v4
@@ -18,3 +20,11 @@ jobs:
             - run: flutter --version
             - run: flutter pub get
             - run: flutter build web
+            - name: Push to Releases
+              uses: ncipollo/release-action@v1
+              with:
+                  artifacts: build/web/**
+                  tag: deploy-${{ github.run_number }}
+                  name: Deploy ${{ github.run_number }}
+                  draft: false
+                  prerelease: false
