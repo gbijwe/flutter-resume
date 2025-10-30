@@ -38,6 +38,6 @@ jobs:
         runs-on: ubuntu-latest
         
         steps: 
-            - uses: bluefireteam/flutter-gh-pages@v8
+            - uses: bluefireteam/flutter-gh-pages@v9
               with:
                 baseHref: /flutter_resume/
