@@ -33,12 +33,8 @@ jobs:
                   name: Deploy ${{ github.run_number }}
                   draft: false
                   prerelease: false
-    
-    deploy: 
-        runs-on: ubuntu-latest
-        
-        steps: 
-            - uses: bluefireteam/flutter-gh-pages@v8
+            - name: Deploy to GitHub Pages
+              uses: bluefireteam/flutter-gh-pages@v8
               with:
                 baseHref: /flutter_resume/
                 webRenderer: canvaskit
