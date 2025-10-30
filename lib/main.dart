@@ -4,6 +4,7 @@ import 'package:flutter_resume/sections/aboutMe.dart';
 import 'package:flutter_resume/sections/contact.dart';
 import 'package:flutter_resume/sections/projects.dart';
 import 'package:flutter_resume/sections/skills.dart';
+import 'package:flutter_resume/widgets/layout/mobileNavBar.dart';
 import 'package:flutter_resume/widgets/layout/myNavBar.dart';
 import 'package:flutter_resume/sections/hero.dart';
 
@@ -29,7 +30,7 @@ class MainApp extends StatelessWidget {
                   return MyNavBar();
                 } else {
                   // return mobileNavbar;
-                  return SizedBox.shrink();
+                  return MobileNavBar();
                 }
               }),
               TestHero(),

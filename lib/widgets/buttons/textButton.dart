@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_resume/colors.dart';
 
-class MyButton extends StatelessWidget {
-  const MyButton({required this.title, this.color, this.shadowColor, this.textColor, this.onPressed, this.fontsize, super.key});
+class MyTextButton extends StatelessWidget {
+  const MyTextButton({required this.title, this.color, this.shadowColor, this.textColor, this.onPressed, this.fontsize, super.key});
   final String title; 
   final Color? color; 
   final Color? shadowColor; 

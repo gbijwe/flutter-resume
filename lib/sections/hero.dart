@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_resume/widgets/buttons/button.dart';
+import 'package:flutter_resume/widgets/buttons/textButton.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_resume/colors.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -84,9 +84,9 @@ class TestHero extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
            children: [
-              MyButton(title: "Download Resume", onPressed: () => launch("https://gb.is-a.dev/static/media/gaurav_bijwe_aug_2025.ac9404793c3b4cc97a75.pdf"), color: yellow, textColor: black, shadowColor: black, fontsize: 18,),
+              MyTextButton(title: "Download Resume", onPressed: () => launch("https://gb.is-a.dev/static/media/gaurav_bijwe_aug_2025.ac9404793c3b4cc97a75.pdf"), color: yellow, textColor: black, shadowColor: black, fontsize: 18,),
               const SizedBox(width: 16.0),
-              MyButton(title: "Contact Me", onPressed: () {}, color: white, textColor: black, shadowColor: black, fontsize: 18,),
+              MyTextButton(title: "Contact Me", onPressed: () {}, color: white, textColor: black, shadowColor: black, fontsize: 18,),
            ] 
           ),
           const SizedBox(height: 100.0,),

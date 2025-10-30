@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_resume/widgets/buttons/button.dart';
+import 'package:flutter_resume/widgets/buttons/textButton.dart';
 import 'package:flutter_resume/widgets/tags/skillTag.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_resume/colors.dart';
@@ -110,8 +110,8 @@ class ProjectCard extends StatelessWidget {
                   spacing: 10.0,
                   runSpacing: 5.0,
                   children: [
-                    if (websiteLink != null) MyButton(title: "View", onPressed:() => launch(websiteLink ?? ""),),
-                    if (sourceLink != null) MyButton(title: "Source code", color: neuBlack, textColor: white, shadowColor: white, onPressed: () => launch(sourceLink ?? ""),),
+                    if (websiteLink != null) MyTextButton(title: "View", onPressed:() => launch(websiteLink ?? ""),),
+                    if (sourceLink != null) MyTextButton(title: "Source code", color: neuBlack, textColor: white, shadowColor: white, onPressed: () => launch(sourceLink ?? ""),),
                   ]
                 ),
               ),

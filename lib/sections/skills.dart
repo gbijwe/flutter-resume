@@ -1,4 +1,3 @@
-import 'dart:math' as Math;
 
 import 'package:flutter/material.dart';
 import 'package:flutter_resume/widgets/cards/skillCard.dart';
