@@ -40,4 +40,4 @@ jobs:
         steps: 
             - uses: bluefireteam/flutter-gh-pages@v9
               with:
-                baseHref: /flutter_resume/
+                baseHref: /flutter-resume/
