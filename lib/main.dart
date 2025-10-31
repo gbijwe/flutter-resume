@@ -51,7 +51,7 @@ class MainApp extends StatelessWidget {
                   );
                 }
               }),
-              Container(key: heroKey, child: TestHero()),
+              Container(key: heroKey, child: TestHero(contactKey: contactKey)),
               Container(key: aboutKey, child: AboutMe()),
               Container(key: skillsKey, child: MySkills()),
               Container(key: projectsKey, child: MyProjects()),

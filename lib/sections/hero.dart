@@ -11,9 +11,18 @@ Future<void> launch(String url, {bool isNewTab = true}) async {
   );
 }
 
+void _scrollToContact(GlobalKey key) {
+  Scrollable.ensureVisible(
+    key.currentContext!, 
+    duration: const Duration(milliseconds: 500),
+    curve: Curves.easeOut
+  );
+}
+
 
 class TestHero extends StatelessWidget {
-  const TestHero({super.key});
+  const TestHero({required this.contactKey, super.key});
+  final GlobalKey contactKey; 
 
   @override
   Widget build(BuildContext context) {
@@ -86,7 +95,7 @@ class TestHero extends StatelessWidget {
            children: [
               MyTextButton(title: "Download Resume", onPressed: () => launch("https://gb.is-a.dev/static/media/gaurav_bijwe_aug_2025.ac9404793c3b4cc97a75.pdf"), color: yellow, textColor: black, shadowColor: black, fontsize: 18,),
               const SizedBox(width: 16.0),
-              MyTextButton(title: "Contact Me", onPressed: () {}, color: white, textColor: black, shadowColor: black, fontsize: 18,),
+              MyTextButton(title: "Contact Me", onPressed: () => _scrollToContact(contactKey), color: white, textColor: black, shadowColor: black, fontsize: 18,),
            ] 
           ),
           const SizedBox(height: 100.0,),
