@@ -9,11 +9,17 @@ import 'package:flutter_resume/widgets/layout/myNavBar.dart';
 import 'package:flutter_resume/sections/hero.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(MainApp());
 }
 
 class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+  MainApp({super.key});
+
+  final heroKey = GlobalKey(); 
+  final aboutKey = GlobalKey(); 
+  final projectsKey = GlobalKey(); 
+  final skillsKey = GlobalKey(); 
+  final contactKey = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
@@ -27,17 +33,29 @@ class MainApp extends StatelessWidget {
             children: [
               LayoutBuilder(builder: (context, constraints) {
                 if (constraints.maxWidth >= 650) {
-                  return MyNavBar();
+                  return MyNavBar(
+                    heroKey: heroKey,
+                    aboutKey: aboutKey,
+                    skillsKey: skillsKey,
+                    projectsKey: projectsKey,
+                    contactKey: contactKey,
+                  );
                 } else {
                   // return mobileNavbar;
-                  return MobileNavBar();
+                  return MobileNavBar(
+                    heroKey: heroKey,
+                    aboutKey: aboutKey,
+                    skillsKey: skillsKey,
+                    projectsKey: projectsKey,
+                    contactKey: contactKey,
+                  );
                 }
               }),
-              TestHero(),
-              AboutMe(),
-              MySkills(),
-              MyProjects(),
-              ContactMe(),
+              Container(key: heroKey, child: TestHero()),
+              Container(key: aboutKey, child: AboutMe()),
+              Container(key: skillsKey, child: MySkills()),
+              Container(key: projectsKey, child: MyProjects()),
+              Container(key: contactKey, child: ContactMe()),
             ],
           ),
         ),

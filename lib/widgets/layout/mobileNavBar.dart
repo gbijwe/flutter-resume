@@ -1,112 +1,16 @@
-// import 'package:flutter/material.dart';
-// import 'package:flutter_resume/colors.dart';
-// import 'package:flutter_resume/widgets/buttons/iconButton.dart';
-// import 'package:flutter_resume/widgets/layout/navbar.dart';
-// import 'package:google_fonts/google_fonts.dart';
-
-// class MobileNavBar extends StatelessWidget {
-//   MobileNavBar({super.key});
-
-//   final List<Widget> dropdownItems = [
-//     Padding(
-//       padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 10.0),
-//       child: TextButton(
-//         onPressed: null,
-//         child: Text('About', 
-//           style: GoogleFonts.sora(
-//             fontSize: 16.0,
-//             color: black,
-//             fontWeight: FontWeight.bold,
-//           ),
-//         ),
-//       ),
-//     ),
-//     Padding(
-//       padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 10.0),
-//       child: TextButton(
-//         onPressed: null,
-//           child: Text('Projects', 
-//           style: GoogleFonts.sora(
-//             fontSize: 16.0,
-//             color: black,
-//             fontWeight: FontWeight.bold,
-//           ),
-//         ),
-//       ),
-//     ),
-//     Padding(
-//       padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 10.0),
-//       child: TextButton(
-//         onPressed: null,
-//         child: Text('Skills', 
-//           style: GoogleFonts.sora(
-//             fontSize: 16.0,
-//             color: black,
-//             fontWeight: FontWeight.bold,
-//           ),
-//         ),
-//       ),
-//     ),
-//     Padding(
-//       padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 10.0),
-//       child: TextButton(
-//         onPressed: null,
-//         child: Text('Contact', 
-//           style: GoogleFonts.sora(
-//             fontSize: 16.0,
-//             color: black,
-//             fontWeight: FontWeight.bold,
-//           ),
-//         ),
-//       ),
-//     ),
-//   ];
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-//       decoration: BoxDecoration(
-//         border: BoxBorder.fromLTRB(
-//           bottom: BorderSide(
-//             color: black,
-//             width: 3,
-//             // strokeAlign: BorderSide.strokeAlignOutside,
-//           ),
-//         ),
-//         boxShadow: [
-//           BoxShadow(
-//             color: black.withAlpha(50),
-//           ),
-//         ]
-//       ),
-//       child: NeuAppBar(
-//         title: 'Gaurav Bijwe',
-//         borderRadius: 0.0,
-//         offset: Offset(0, 0),
-//         fontSize: 24.0,
-//         actions: [
-//           MyIconButton(icon: Icon(Icons.menu)),
-//         ],
-//       ),
-//     ); 
-    
-//   }
-// }
-
-
-// /*
-
-
-
-// */
-
 import 'package:flutter/material.dart';
 import 'package:flutter_resume/colors.dart';
 import 'package:flutter_resume/widgets/layout/navbar.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class MobileNavBar extends StatelessWidget {
-  MobileNavBar({super.key});
+  MobileNavBar({required this.heroKey, required this.aboutKey, required this.skillsKey, required this.projectsKey, required this.contactKey, super.key});
+
+  final GlobalKey heroKey;
+  final GlobalKey aboutKey;
+  final GlobalKey skillsKey;
+  final GlobalKey projectsKey;
+  final GlobalKey contactKey;
 
   final List<PopupMenuEntry<String>> dropdownItems = [
     PopupMenuItem<String>(
@@ -156,10 +60,30 @@ class MobileNavBar extends StatelessWidget {
   ];
 
   void _handleMenuSelection(String value) {
-    // Handle navigation here
-    print('Selected: $value');
-    // You can add navigation logic here, for example:
-    // if (value == 'about') { /* scroll to about section */ }
+    GlobalKey? targetKey; 
+
+    switch (value) {
+      case 'about':
+        targetKey = aboutKey;
+        break;
+      case 'projects':
+        targetKey = projectsKey;
+        break;
+      case 'skills':
+        targetKey = skillsKey;
+        break;
+      case 'contact':
+        targetKey = contactKey;
+        break;
+    }
+
+    if (targetKey != null && targetKey.currentContext != null) {
+      Scrollable.ensureVisible(
+        targetKey.currentContext!,
+        duration: const Duration(milliseconds: 500),
+        curve: Curves.easeInOut,
+      );
+    }
   }
 
   @override
