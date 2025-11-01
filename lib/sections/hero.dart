@@ -93,9 +93,9 @@ class TestHero extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
            children: [
-              MyTextButton(title: "Download Resume", onPressed: () => launch("https://gb.is-a.dev/static/media/gaurav_bijwe_aug_2025.ac9404793c3b4cc97a75.pdf"), color: yellow, textColor: black, shadowColor: black, fontsize: 18,),
+              MyTextButton(title: "Contact Me", onPressed: () => _scrollToContact(contactKey), color: yellow, textColor: black, shadowColor: black, fontsize: 18, trailing: Icon(Icons.arrow_outward, color: black, size: 24, weight: 50.0,),),
               const SizedBox(width: 16.0),
-              MyTextButton(title: "Contact Me", onPressed: () => _scrollToContact(contactKey), color: white, textColor: black, shadowColor: black, fontsize: 18,),
+              MyTextButton(title: "Download Resume", onPressed: () => launch("https://gb.is-a.dev/static/media/gaurav_bijwe_aug_2025.ac9404793c3b4cc97a75.pdf"), color: white, textColor: black, shadowColor: black, fontsize: 18,),
            ] 
           ),
           const SizedBox(height: 100.0,),

@@ -10,6 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   google_fonts: ^6.3.2
+  icons_plus: ^5.0.0
   neubrutalism_ui: ^2.0.2
   url_launcher: ^6.3.2
 

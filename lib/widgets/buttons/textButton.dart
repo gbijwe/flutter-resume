@@ -3,13 +3,14 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_resume/colors.dart';
 
 class MyTextButton extends StatelessWidget {
-  const MyTextButton({required this.title, this.color, this.shadowColor, this.textColor, this.onPressed, this.fontsize, super.key});
+  const MyTextButton({required this.title, this.color, this.shadowColor, this.textColor, this.onPressed, this.fontsize, this.trailing, super.key});
   final String title; 
   final Color? color; 
   final Color? shadowColor; 
   final Color? textColor; 
   final Function()? onPressed;
   final double? fontsize;
+  final Widget? trailing; 
 
   @override
   Widget build(BuildContext context) {
@@ -33,14 +34,29 @@ class MyTextButton extends StatelessWidget {
         ),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
-          child: Text(
-            title, 
-            style: GoogleFonts.archivoBlack(
-              fontSize: fontsize ?? 14.0, 
-              color: textColor ?? black,
-              fontWeight: FontWeight.normal
+          child: trailing != null ? 
+            Row(
+            children: [
+              Text(
+                title, 
+                style: GoogleFonts.archivoBlack(
+                  fontSize: fontsize ?? 14.0, 
+                  color: textColor ?? black,
+                  fontWeight: FontWeight.normal
+                )
+              ),
+                const SizedBox(width: 4.0),
+                trailing!,
+              ]
             )
-          ),
+           : Text(
+              title, 
+              style: GoogleFonts.archivoBlack(
+                fontSize: fontsize ?? 14.0, 
+                color: textColor ?? black,
+                fontWeight: FontWeight.normal
+              )
+            ),
         )
       )
     );

@@ -5,6 +5,7 @@ import 'package:flutter_resume/sections/footer.dart';
 import 'package:flutter_resume/widgets/buttons/contactMeButton.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_resume/colors.dart';
+import 'package:icons_plus/icons_plus.dart';
 import 'package:neubrutalism_ui/neubrutalism_ui.dart';
 
 class ContactMe extends StatelessWidget {
@@ -87,7 +88,7 @@ class ContactMe extends StatelessWidget {
                   title: "LinkedIn",
                   link: "https://www.linkedin.com/in/gbijwe", 
                   description: "Connect with me professionally",
-                  icon: Icon(Icons.contacts, size: 24, color: white), 
+                  icon: Icon(Bootstrap.linkedin, size: 32, color: white), 
                 ),
               ),
               Transform.rotate(
@@ -96,7 +97,7 @@ class ContactMe extends StatelessWidget {
                   title: "GitHub",
                   link: "https://github.com/gbijwe",
                   description: "Check out my repos",
-                  icon: Icon(Icons.contacts, size: 24, color: white), 
+                  icon: Icon(Bootstrap.github, size: 32, color: white), 
 
                 ),
               ),
@@ -106,7 +107,7 @@ class ContactMe extends StatelessWidget {
                   title: "Email", 
                   link: "mailto:gabjwe@gmail.com",
                   description: "gabijwe@gmail.com",
-                  icon: Icon(Icons.contacts, size: 24, color: white), 
+                  icon: Icon(AntDesign.mail_fill, size: 32, color: white), 
                 ),
               ),
             ],
