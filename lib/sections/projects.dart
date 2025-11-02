@@ -1,6 +1,7 @@
 import 'dart:math' as Math;
 
 import 'package:flutter/material.dart';
+import 'package:flutter_resume/widgets/animations/tiltAnimation.dart';
 import 'package:flutter_resume/widgets/cards/projectCard.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_resume/colors.dart';
@@ -85,18 +86,16 @@ class MyProjects extends StatelessWidget {
             spacing: 50.0,
             runSpacing: 50.0,
             children: [
-              Transform.rotate(
-                angle: -degrees * Math.pi / 180,
+              TiltedAnimationWidget(
+                tiltAngle: -degrees * Math.pi / 180,
                 child: ProjectCard(color: green, title: "PrintHub", description: "Engineered a plug-and-play IoT device and a cross-platform Flutter application to convert standard printers into self-service kiosks. Managed end-to-end product development and client relations.", techStack: ["Flutter", "IoT", "Supabase"], websiteLink: "https://www.printhubco.in",),
               ),
-              Transform.rotate(
-                angle: degrees * Math.pi / 180,
-                child: ProjectCard(color: neonBlue, title: "Presently", description: "Developed a modular Flutter application to automate hostel attendance using Computer Vision (CV), Bluetooth Low Energy (BLE) for mass check-ins, and geolocation services for field tracking.", techStack: ["Flutter", "Computer Vision", "BLE", "Geolocation"],),
-              ),
-              Transform.rotate(
-                angle: -degrees * Math.pi / 180,
-                child: ProjectCard(color: yellow, title: "SalesPath", description: "Built a full-stack sales team management application using Flutter and Next.js, featuring background geolocation tracking, task verification, and administrative controls. Winner of GP Enkryptia Hackathon 2024.", techStack: ["Flutter", "Next.js", "Geolocation"],),
-              ),
+              TiltedAnimationWidget(
+                tiltAngle: degrees * Math.pi / 180,
+                child: ProjectCard(color: neonBlue, title: "Presently", description: "Developed a modular Flutter application to automate hostel attendance using Computer Vision (CV), Bluetooth Low Energy (BLE) for mass check-ins, and geolocation services for field tracking.", techStack: ["Flutter", "Computer Vision", "BLE", "Geolocation"],)),
+              TiltedAnimationWidget(
+                tiltAngle: -degrees * Math.pi / 180,
+                child: ProjectCard(color: yellow, title: "SalesPath", description: "Built a full-stack sales team management application using Flutter and Next.js, featuring background geolocation tracking, task verification, and administrative controls. Winner of GP Enkryptia Hackathon 2024.", techStack: ["Flutter", "Next.js", "Geolocation"],)),
             ],
           ),
           const SizedBox(height: 50.0),
