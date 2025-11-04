@@ -1,4 +1,7 @@
+import 'dart:html' as html;
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_resume/widgets/buttons/textButton.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_resume/colors.dart';
@@ -10,6 +13,27 @@ Future<void> launch(String url, {bool isNewTab = true}) async {
     webOnlyWindowName: isNewTab ? '_blank' : '_self',
   );
 }
+
+// Future<void> openAssetFileInNewTab(String assetPath, String mimeType) async {
+//   try {
+//     // Load the asset as byte data
+//     var bytes = await rootBundle.load(assetPath);
+
+//     // Create a Blob from the byte data
+//     final blob = html.Blob([bytes.buffer.asUint8List()], mimeType);
+
+//     // Create an object URL from the Blob
+//     final url = html.Url.createObjectUrlFromBlob(blob);
+
+//     // Open the URL in a new browser tab
+//     html.window.open(url, "_blank");
+
+//     // Revoke the object URL to free up resources (optional, but good practice)
+//     html.Url.revokeObjectUrl(url);
+//   } catch (e) {
+//     print("Error opening asset file: $e");
+//   }
+// }
 
 void _scrollToContact(GlobalKey key) {
   Scrollable.ensureVisible(
@@ -95,7 +119,8 @@ class TestHero extends StatelessWidget {
            children: [
               MyTextButton(title: "Contact Me", onPressed: () => _scrollToContact(contactKey), color: yellow, textColor: black, shadowColor: black, fontsize: 18, trailing: Icon(Icons.arrow_outward, color: black, size: 24, weight: 50.0,),),
               const SizedBox(width: 16.0),
-              MyTextButton(title: "Download Resume", onPressed: () => launch("https://gb.is-a.dev/static/media/gaurav_bijwe_aug_2025.ac9404793c3b4cc97a75.pdf"), color: white, textColor: black, shadowColor: black, fontsize: 18,),
+              // MyTextButton(title: "Download Resume", onPressed: () => openAssetFileInNewTab('resume/GAURAV_BIJWE_2026.pdf', 'application/pdf'), color: white, textColor: black, shadowColor: black, fontsize: 18,),
+              MyTextButton(title: "Download Resume", onPressed: () => launch('assets/resume/GAURAV_BIJWE_2026.pdf'), color: white, textColor: black, shadowColor: black, fontsize: 18,),
            ] 
           ),
           const SizedBox(height: 100.0,),
